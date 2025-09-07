@@ -1,0 +1,27 @@
+{
+  "name": "projet-transversal-m1p12-backend",
+  "version": "1.0.0",
+  "description": "Voici les étapes à suivre pour créer un projet Node.js et ajouter la dépendance MongoDB :",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michael78r/projet-transversal-m1p12-backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/michael78r/projet-transversal-m1p12-backend/issues"
+  },
+  "homepage": "https://github.com/michael78r/projet-transversal-m1p12-backend#readme",
+  "dependencies": {
+    "mongodb": "^6.19.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}

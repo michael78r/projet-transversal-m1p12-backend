@@ -1,27 +1,33 @@
 {
   "name": "projet-transversal-m1p12-backend",
   "version": "1.0.0",
-  "description": "Voici les étapes à suivre pour créer un projet Node.js et ajouter la dépendance MongoDB :",
+  "description": "Backend for the service platform",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/michael78r/projet-transversal-m1p12-backend.git"
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "jest --testTimeout=10000 --detectOpenHandles"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/michael78r/projet-transversal-m1p12-backend/issues"
-  },
-  "homepage": "https://github.com/michael78r/projet-transversal-m1p12-backend#readme",
   "dependencies": {
-    "mongodb": "^6.19.0"
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-validator": "^6.14.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^5.0.0",
+    "multer": "^1.4.5-lts.1",
+    "passport": "^0.6.0",
+    "passport-jwt": "^4.0.0",
+    "socket.io": "^4.5.4",
+    "winston": "^3.8.2"
   },
   "devDependencies": {
-    "nodemon": "^3.1.10"
+    "jest": "^29.3.1",
+    "nodemon": "^3.1.10",
+    "supertest": "^6.3.3"
   }
 }

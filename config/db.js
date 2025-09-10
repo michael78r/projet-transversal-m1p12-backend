@@ -1,9 +1,10 @@
 const { MongoClient } = require('mongodb');
+const { Sequelize } = require('sequelize');
 require('dotenv').config();
 
+// MongoDB Configuration
 const uri = process.env.MONGO_URI;
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
-
 let db;
 
 const connectDB = async () => {
@@ -30,4 +31,19 @@ const closeDB = async () => {
     }
 };
 
-module.exports = { connectDB, getDB, closeDB };
+// PostgreSQL Configuration
+const sequelize = new Sequelize(process.env.PG_DATABASE, process.env.PG_USER, process.env.PG_PASSWORD, {
+  host: process.env.PG_HOST,
+  dialect: 'postgres'
+});
+
+const connectPostgres = async () => {
+  try {
+    await sequelize.authenticate();
+    console.log('Connection to PostgreSQL has been established successfully.');
+  } catch (error) {
+    console.error('Unable to connect to the PostgreSQL database:', error);
+  }
+};
+
+module.exports = { connectDB, getDB, closeDB, sequelize, connectPostgres };
